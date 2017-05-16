@@ -53,11 +53,10 @@ var app = new Vue({
     },
     mounted:function () {
         document.onkeyup = (function (e) {
-            if(e && e.keyCode === 8){
-                console.log(e.target.NodeName)
+            if(e && e.keyCode === 46){
                 if(this.moveEvent.index !=null){
                     this.notes.splice(this.moveEvent.index,1);
-                    // this.moveEvent.index = this.notes.length ? this.notes.length - 1 : null;
+                    this.moveEvent.index = this.notes.length ? this.notes.length - 1 : null;
                     this.save();
                 }
             }
