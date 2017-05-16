@@ -1,0 +1,126 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+.header{
+    width: 100%;
+    height: 80px;
+    background: #1CA5F3;
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    line-height: 80px;
+}
+
+.contain{
+    overflow: hidden;
+    margin: 4% auto;
+    width: 90%;
+    height: 700px;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #dde3f4;
+    background: rgba(233,233,255,0.4);
+}
+
+.note{
+    width: 240px;
+    border-radius: 5px;
+    position: absolute;
+    top: 100px;
+    left: 200px;
+}
+.note.active{
+    z-index: 9999;
+    box-shadow: 1px 2px 20px rgba(0,0,0,0.5);
+}
+.note.red{
+    border: 1px solid red;
+ }
+.note.red .title{
+    cursor: pointer;
+    line-height: 40px;
+    font-weight:normal;
+    width: 100%;
+    height: 40px;
+    border-bottom: 1px solid red;
+    background: red;
+    font-size: 22px;
+    color: #fff;
+    text-align: center;
+    position: relative;
+}
+.note.blue{
+    border: 1px solid #1D9DE6;
+}
+.note.blue .title{
+    cursor: pointer;
+    line-height: 40px;
+    font-weight:normal;
+    width: 100%;
+    height: 40px;
+    border-bottom: 1px solid #1D9DE6;
+    background: #1D9DE6;
+    font-size: 22px;
+    color: #fff;
+    text-align: center;
+}
+.note.green{
+    border: 1px solid springgreen;
+}
+.note.green .title{
+    cursor: pointer;
+    line-height: 40px;
+    font-weight:normal;
+    width: 100%;
+    height: 40px;
+    border-bottom: 1px solid springgreen;
+    background: springgreen;
+    font-size: 22px;
+    color: #fff;
+    text-align: center;
+}
+.note.pink{
+    border: 1px solid hotpink;
+}
+.note.pink .title{
+    cursor: pointer;
+    line-height: 40px;
+    font-weight:normal;
+    width: 100%;
+    height: 40px;
+    border-bottom: 1px solid hotpink;
+    background: hotpink;
+    font-size: 22px;
+    color: #fff;
+    text-align: center;
+}
+.note .content{
+    padding: 20px;
+    height: 200px;
+    background: #fff;
+    border-radius: 5px;
+}
+.note textarea {
+    border: none;
+    min-height: 200px;
+    width: 100%;
+    outline: none;
+    resize: none;
+}
+.close{
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    background: #dfdfdf;
+    border-radius: 50%;
+    color: black;
+    cursor: pointer;
+    position: absolute;
+    right: 5px;
+    top:5px;
+    text-align: center;
+    line-height: 30px;
+}

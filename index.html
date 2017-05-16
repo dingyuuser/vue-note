@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body onselectstart="return false" style="-moz-user-select:none;">
+<div id="el">
+  <div class="header">便签小助手</div>
+  <div class="contain" v-on:dblclick.prevent="addNote" @mousemove="mv" @mouseup="mu">
+    <div v-for="(v,i) in notes" :style="{top:v.top+'px',left:v.left+'px'}" :class="`note ${v.theme} ${i==moveEvent.index?'active':''}`" :key="v.id" >
+      <h3 class="title" @mousedown="md(i,$event)">{{v.title}}
+        <div class="close" @click.stop.prevent="deleteNote">X</div>
+      </h3>
+      <div class="content">
+        <textarea @blur.stop.prevent="save" v-model="v.content"></textarea>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="index.js"></script>
+</body>
+</html>
